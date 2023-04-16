@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ignore data
+data/train/
+data/test/
+
+# ignore test code
+preprocess/test.ipynb
+
+# ignore each json file
+*.json
+*.jsonl
