@@ -16,7 +16,7 @@ mkdir data
 
 ### Preprocess dataset
 ```
-python preprocess/divide_train_data.py --create_all_jsonl
+python preprocess/create_jsonl.py --create_all_jsonl
 ```
 After doing this code, make sure that following files are created
 > `data/all_data.jsonl`

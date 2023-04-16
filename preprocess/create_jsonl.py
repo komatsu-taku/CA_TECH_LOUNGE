@@ -70,8 +70,8 @@ def create_data_jsonl(args, train_dir, test_dir):
     if os.path.isfile(args.json_path):
         os.remove(args.json_path)
 
-    # label_dict
-    with open(args.label_dict, "r") as f:
+    # label2num
+    with open(args.label2num, "r") as f:
         label2num = json.load(f)
     
     # train
@@ -160,16 +160,23 @@ def create_label_dict(args, train_class_dir: str):
     """
     各クラスを0~79に割り当てた辞書を作成
     """
-    if os.path.isfile(args.label_dict):
-        os.remove(args.label_dict)
+    for file in [args.label2num, args.num2label]:
+        if os.path.isfile(file):
+            os.remove(file)
     
     label2num = {}
+    num2label = {}
     for idx, dir in enumerate(train_class_dir):
         name = os.path.basename(dir)
         label2num[name] = idx
+        num2label[idx] = name
     
-    with open(args.label_dict, "a") as f:
+    with open(args.label2num, "a") as f:
         json.dump(label2num, f, indent=2, ensure_ascii=False)
+
+    with open(args.num2label, "a") as f:
+        json.dump(num2label, f, indent=2, ensure_ascii=False)
+    
 
 def main(args: argparse.Namespace):
     # get all data path
@@ -198,7 +205,8 @@ def parse_args():
     parser.add_argument("-dte", "--test_dpath", type=str, default="test/")
     parser.add_argument("-ch", "--check", action="store_true")
     parser.add_argument("-j", "--json_path", type=str, default="data/all_data.jsonl")
-    parser.add_argument("--label_dict", type=str, default="data/label_dict.json")
+    parser.add_argument("--label2num", type=str, default="data/label2num.json")
+    parser.add_argument("--num2label", type=str, default="data/num2label.json")
     parser.add_argument("--create_all_jsonl", action="store_true")
     parser.add_argument("-r", "--ratio", type=float, default=0.8)
 
