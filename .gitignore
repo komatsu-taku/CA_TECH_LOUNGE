@@ -138,3 +138,6 @@ preprocess/test.ipynb
 # ignore each json file
 *.json
 *.jsonl
+
+# ignore weights
+checkpoints/
