@@ -1,0 +1,7 @@
+train: ../data_yolo/train
+val: ../data_yolo/valid
+test: ../data_yolo/test
+
+nc: 80
+
+names: ['Goose', 'Rhinoceros', 'Giraffe', 'Moths and butterflies', 'Shrimp', 'Swan', 'Turtle', 'Frog', 'Seahorse', 'Worm', 'Duck', 'Lion', 'Centipede', 'Sea lion', 'Scorpion', 'Elephant', 'Camel', 'Goat', 'Cattle', 'Parrot', 'Shark', 'Raccoon', 'Zebra', 'Lynx', 'Ostrich', 'Eagle', 'Snail', 'Koala', 'Otter', 'Deer', 'Turkey', 'Bull', 'Ladybug', 'Snake', 'Hamster', 'Jaguar', 'Horse', 'Squid', 'Lizard', 'Panda', 'Sea turtle', 'Canary', 'Tortoise', 'Woodpecker', 'Chicken', 'Squirrel', 'Crab', 'Polar bear', 'Tick', 'Fish', 'Leopard', 'Owl', 'Jellyfish', 'Goldfish', 'Mouse', 'Pig', 'Raven', 'Sparrow', 'Butterfly', 'Penguin', 'Rabbit', 'Mule', 'Harbor seal', 'Bear', 'Fox', 'Kangaroo', 'Hippopotamus', 'Monkey', 'Spider', 'Caterpillar', 'Brown bear', 'Sheep', 'Hedgehog', 'Red panda', 'Crocodile', 'Whale', 'Magpie', 'Cheetah', 'Tiger', 'Starfish']
