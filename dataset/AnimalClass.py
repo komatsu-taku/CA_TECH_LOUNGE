@@ -29,8 +29,6 @@ class AnimalDataset(Dataset):
             self.data_dir = os.path.join(self.root, "train")
             self.jsonl_file = os.path.join(self.root, self.image_set+".jsonl")
 
-        print("------------")
-        print(self.jsonl_file)
         df = pd.read_json(self.jsonl_file, orient="record", lines=True)
         self.images = df["image_path"].to_list()
         self.labels = df["label"].to_list()
