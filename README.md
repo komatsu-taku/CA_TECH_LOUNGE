@@ -92,14 +92,14 @@ python yolov5/train.py \
 ## Inference
 After doing `train.py`, weights are obtained `yolo5/runs/train/expN/weights/bes.pt`, where N is shown in the log after train execution.
 ```python
-python detect.py \
+python yolov5/detect.py \
     --source data_yolo/test 
     --weights path/to/weights 
     --conf 0.30
 ```
 To test with a single image, run the following command
 ```python
-python  detect.py \
+python  yolov5/detect.py \
     --source path/to/image
     --weights path/to/weights
     --conf 0.30
