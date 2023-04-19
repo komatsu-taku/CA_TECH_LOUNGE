@@ -7,13 +7,16 @@ This repository is for CA_TECH_LOUNGE. I worked on assignment 3 (Computer Vision
 [![Python](https://img.shields.io/badge/python-3.8.10-blue?logo=python&logoColor=FED643)](https://www.python.org/downloads/release/python-3810/)
 [![Pytorch](https://img.shields.io/badge/pytorch-1.8.1-red?logo=pytorch)](https://download.pytorch.org/whl/torch_stable.html)
 
+### Environment
+* GeForce RTX 3080
+
 ### Requirenment
 * Python 3.8.10
 * pytorch 1.8.1
 
 ### Install our code
 ```bash
-git clone git@github.com:komatsu-taku/CA_TECH_LOUNGE.git
+git clone --recursive git@github.com:komatsu-taku/CA_TECH_LOUNGE.git
 ```
 
 ### make data dir
@@ -25,6 +28,10 @@ mkdir data
 ### install package
 ```bash
 pip install -r requirement.txt
+```
+When using GeFOrce 3090, the torch version must be changed as follows. For other environments, install the appropriate version of torch accordingly.
+```
+pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ## Prepare Dataset
