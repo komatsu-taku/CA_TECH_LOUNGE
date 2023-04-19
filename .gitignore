@@ -141,6 +141,7 @@ preprocess/test.ipynb
 
 # ignore weights
 checkpoints/
+results/
 
 # ignore data for yolo
 data_yolo/
