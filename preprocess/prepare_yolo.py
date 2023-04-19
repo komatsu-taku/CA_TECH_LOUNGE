@@ -78,7 +78,7 @@ def customize_bbox(image_path: str, label2num: DefaultDict, image_size: int):
         w = c - a # 幅
         a = (a + c) / 2 # 中心のx座標
         b = (b + d) / 2 # 中心のy座標
-        bbox_for_yolo = [a, b, h, w]
+        bbox_for_yolo = [a, b, w, h]
 
         label_yolo += str(label)
 
